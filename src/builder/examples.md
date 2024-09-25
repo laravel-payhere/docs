@@ -13,8 +13,8 @@ class CheckoutController extends Controller
     {
         return PayHere::builder()
             ->guest()
-            ->title('iPhone 15 Pro Max')
-            ->amount(425000)
+            ->title('Perpetual License (1 Year)')
+            ->amount(30000)
             ->checkout();
     }
 }
