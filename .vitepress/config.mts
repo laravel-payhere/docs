@@ -85,5 +85,13 @@ export default defineConfig({
             pattern: "https://github.com/laravel-payhere/docs/edit/main/src/:path",
             text: "Edit this page on GitHub",
         },
+        search: {
+            provider: "algolia",
+            options: {
+                appId: "EWK3GHM6CX",
+                apiKey: "8f8d62a9f028eed8fe5088c0e616756e",
+                indexName: "laravel-payhere",
+            },
+        },
     },
 });
