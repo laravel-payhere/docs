@@ -24,15 +24,19 @@ In this example, we check if the user's email matches `admin@yourdomain.com`. If
 
 ## Change the default brand logo
 
-To change the default brand logo in the PayHere panel, update the `panel_brand_logo` path in the `payhere.php` file to point to the location of your new logo file:
+To change the default brand logo in the PayHere panel, update the `panel_brand_logo.light` and `panel_brand_logo.dark` path in the `payhere.php` file:
 
 ```php
 return [
 
     // ...
 
-    'panel_brand_logo' => asset('vendor/payhere/images/logo.svg'),         // [!code --]
-    'panel_brand_logo' => asset('path/to/your/logo.svg'),                  // [!code ++]
+    'panel_brand_logo' => [
+        'light' => 'vendor/payhere/images/logo-light.svg',                  // [!code --]
+        'dark' => 'vendor/payhere/images/logo-dark.svg',                    // [!code --]
+        'light' => 'path/to/your/logo-light.svg',                           // [!code ++]
+        'dark' => 'path/to/your/logo-dark.svg',                             // [!code ++]
+    ],
 
     // ...
 
